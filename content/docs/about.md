@@ -1,16 +1,16 @@
-# About Project G
+# About Anı⃰mr
 
-> **Project G** is a platform where music meets animation. Users can experience synchronized animations with songs or get creative by contributing song data or coding custom animations. Whether you're a music lover or a developer, Project G lets you watch, play, and contribute to interactive music experiences.
+> **Anı⃰mr** is a platform where music meets animation. Users can experience synchronized animations with songs or get creative by contributing song data or coding custom animations. Whether you're a music lover or a developer, Anı⃰mr lets you watch, play, and contribute to interactive music experiences.
 
-### What is Project G?
+### What is Anı⃰mr?
 
-Project G is a unique platform that combines music and animation. You can watch animations that move in perfect sync with the music or even create your own. Submit song data or write code for custom animations—it’s all about bringing music to life visually.
+Anı⃰mr is a unique platform that combines music and animation. You can watch animations that move in perfect sync with the music or even create your own. Submit song data or write code for custom animations—it’s all about bringing music to life visually.
 
 ---
 
 ### Why Contribute?
 
-Your contributions power Project G! Whether you're submitting song data or coding animations, you'll help grow a vibrant community of interactive music experiences. Contributing is simple and fun, and you'll be part of something creative, collaborative, and impactful. Plus, it’s a great way to learn and showcase your skills!
+Your contributions power Anı⃰mr! Whether you're submitting song data or coding animations, you'll help grow a vibrant community of interactive music experiences. Contributing is simple and fun, and you'll be part of something creative, collaborative, and impactful. Plus, it’s a great way to learn and showcase your skills!
 
 ---
 
@@ -23,19 +23,19 @@ Your contributions power Project G! Whether you're submitting song data or codin
 
 ---
 
-### How Project G Works
+### How Anı⃰mr Works
 
-Project G syncs animations with music, allowing you to **watch and interact**. Songs are paired with visual animations that respond to beats, lyrics, and rhythm. You can play along with the music or create your own by submitting new song data or coding animations to match the music.
+Anı⃰mr syncs animations with music, allowing you to **watch and interact**. Songs are paired with visual animations that respond to beats, lyrics, and rhythm. You can play along with the music or create your own by submitting new song data or coding animations to match the music.
 
 ---
 
 ## Get Involved
 
-Ready to contribute? Whether you love music, enjoy coding, or want to help shape Project G, there are easy ways to get started:
+Ready to contribute? Whether you love music, enjoy coding, or want to help shape Anı⃰mr, there are easy ways to get started:
 
 ### Submit a Song
 
-Submit songs with synced lyrics, timings, and structure. Simply provide song data, and Project G will handle the rest, turning your input into a visual experience.
+Submit songs with synced lyrics, timings, and structure. Simply provide song data, and Anı⃰mr will handle the rest, turning your input into a visual experience.
 
 ### Submit Code/Animation
 
@@ -43,4 +43,4 @@ Want to code animations that match music beats? Dive into the event-based animat
 
 ### Explore Contributions
 
-See what the community has created! Browse submitted songs and animations, get inspired, and learn how you can add your own unique touch to Project G.
+See what the community has created! Browse submitted songs and animations, get inspired, and learn how you can add your own unique touch to Anı⃰mr.

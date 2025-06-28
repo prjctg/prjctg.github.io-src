@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Developer Guide
 
-Welcome, Developers! This guide will help you dive into the technical side of Project G by contributing code for animations, games, and more.
+Welcome, Developers! This guide will help you dive into the technical side of Anı⃰mr by contributing code for animations, games, and more.
 
 ### What you can do as a Developer:
 

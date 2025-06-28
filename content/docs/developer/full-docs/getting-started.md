@@ -2,24 +2,24 @@
 sidebar_position: 2
 ---
 
-# Getting Started with Project G Development
+# Getting Started with Anı⃰mr Development
 
-Welcome to the development section of Project G! In this guide, you'll learn how to create animations and games that sync with music using the Project G platform. Development is entirely browser-based, so you won’t need to set up a local environment. Here's how you can get started:
+Welcome to the development section of Anı⃰mr! In this guide, you'll learn how to create animations and games that sync with music using the Anı⃰mr platform. Development is entirely browser-based, so you won’t need to set up a local environment. Here's how you can get started:
 
 ## Key Concepts
 
-Project G allows you to create both **animations** and **games**. The difference lies mainly in the interactivity level:
+Anı⃰mr allows you to create both **animations** and **games**. The difference lies mainly in the interactivity level:
 
 - **Animations** focus on visual effects triggered by music events.
 - **Games** add interactive elements like mouse clicks or touch events and may include scoring logic or more complex event handling.
 
 ## Understanding Modules
 
-In Project G, your development unit is a **module**, which combines JavaScript code, CSS, and HTML. Modules can be combined into a **module collection**, allowing for more complex layouts and interactivity. Each module encapsulates its CSS and HTML, ensuring that styles and markup do not interfere with other modules.
+In Anı⃰mr, your development unit is a **module**, which combines JavaScript code, CSS, and HTML. Modules can be combined into a **module collection**, allowing for more complex layouts and interactivity. Each module encapsulates its CSS and HTML, ensuring that styles and markup do not interfere with other modules.
 
 ## Running Code in the Browser
 
-You will develop your code online, directly in the Project G application. Each module runs directly in the browser through a special environment called the **Code Playground**, where you can test your animations and games alongside selected songs.
+You will develop your code online, directly in the Anı⃰mr application. Each module runs directly in the browser through a special environment called the **Code Playground**, where you can test your animations and games alongside selected songs.
 This includes three tabs where you can input:
 
 - **JavaScript ES Module**: The core logic for your animation or game.
@@ -55,9 +55,9 @@ You can import any external libraries you need, provided they are hosted on **js
 
 ## Running Your Code with Music
 
-Once a song is selected and your code is running, the Project G platform will trigger your code based on music events. You can use the `G` object to handle these events and synchronize your animations or game actions with the music.
+Once a song is selected and your code is running, the Anı⃰mr platform will trigger your code based on music events. You can use the `G` object to handle these events and synchronize your animations or game actions with the music.
 
-Your modules will interact with built-in events triggered by the Project G framework (like play and pause) as well as custom events you define for your functionality (like scoring in a game). For now, the two main events you can handle are:
+Your modules will interact with built-in events triggered by the Anı⃰mr framework (like play and pause) as well as custom events you define for your functionality (like scoring in a game). For now, the two main events you can handle are:
 
 - **G.TYPE.PLAY**: Triggered when the song starts playing.
 - **G.TYPE.PAUSE**: Triggered when the song is paused.
@@ -68,10 +68,10 @@ Now that you have a basic understanding, let’s dive into the details of the ev
 
 ## Advanced Details
 
-For those interested in diving deeper into the concepts of Project G development, here are some additional details:
+For those interested in diving deeper into the concepts of Anı⃰mr development, here are some additional details:
 
 - **Module Structure**: Each module encapsulates its CSS and HTML, ensuring that styles and markup do not interfere with other modules.
-- **Event Types**: You can handle built-in events triggered by the Project G framework and create custom events for specific functionality. For example, you might create events like "score" or "gameOver."
+- **Event Types**: You can handle built-in events triggered by the Anı⃰mr framework and create custom events for specific functionality. For example, you might create events like "score" or "gameOver."
 
 - **Module Collections**: A **module collection** consists of one or more modules combined together. You can also nest collections for more complex interactions and layouts.
 

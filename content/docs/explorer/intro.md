@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Explorer Guide
 
-Welcome, Explorers! This guide is designed to help you get the most out of Project G by watching animations and playing games synced to music.
+Welcome, Explorers! This guide is designed to help you get the most out of Anı⃰mr by watching animations and playing games synced to music.
 
 ### What you can do as an Explorer:
 

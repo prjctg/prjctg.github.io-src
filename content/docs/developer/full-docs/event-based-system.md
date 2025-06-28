@@ -4,11 +4,11 @@ sidebar_position: 3
 
 # Event-Based System
 
-In Project G, the Event-Based System allows your modules to react to various built-in and custom events. This functionality enables dynamic interactions within your animations and games, enhancing user experience and engagement.
+In Anı⃰mr, the Event-Based System allows your modules to react to various built-in and custom events. This functionality enables dynamic interactions within your animations and games, enhancing user experience and engagement.
 
 ## Built-in Events
 
-Project G provides several built-in events that are automatically triggered by the framework. Here are some key events you can handle in your modules:
+Anı⃰mr provides several built-in events that are automatically triggered by the framework. Here are some key events you can handle in your modules:
 
 - **G.TYPE.PLAY**: Triggered when the song starts playing.
 - **G.TYPE.PAUSE**: Triggered when the song is paused.
@@ -56,6 +56,6 @@ This method will allow your module to respond dynamically to the events that occ
 
 ## Conclusion
 
-Utilizing the Event-Based System effectively can lead to a more interactive and engaging experience in your animations and games. Understanding how to handle both built-in and custom events is crucial for taking full advantage of the Project G platform.
+Utilizing the Event-Based System effectively can lead to a more interactive and engaging experience in your animations and games. Understanding how to handle both built-in and custom events is crucial for taking full advantage of the Anı⃰mr platform.
 
 For more details on how to structure your modules and collections, please refer to the [Module Collections guide](#).

@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Module Collections
 
-In Project G, a **module collection** is a grouping of one or more modules or even other module collections. It serves to organize and define the layout of these modules while also managing event routing within the collection.
+In Anı⃰mr, a **module collection** is a grouping of one or more modules or even other module collections. It serves to organize and define the layout of these modules while also managing event routing within the collection.
 
 ## Structure of a Module Collection
 
@@ -49,8 +49,8 @@ This flexibility allows for more complex and dynamic event-driven behavior withi
 
 The elements within each module are encapsulated. This means that you should not access elements from another module directly. For example, using `document.getElementById` to reference an element from another module will not work.
 
-Instead, you should use the Project G framework’s method `G.getElementById(id)` to access elements within your own module. This ensures encapsulation and maintains a clean separation between modules.
+Instead, you should use the Anı⃰mr framework’s method `G.getElementById(id)` to access elements within your own module. This ensures encapsulation and maintains a clean separation between modules.
 
 ## Conclusion
 
-Module collections in Project G provide a flexible way to organize and manage groups of modules, offering control over layout, event routing, and interaction. By using these collections, you can build complex animations or games that are easy to manage and extend.
+Module collections in Anı⃰mr provide a flexible way to organize and manage groups of modules, offering control over layout, event routing, and interaction. By using these collections, you can build complex animations or games that are easy to manage and extend.
