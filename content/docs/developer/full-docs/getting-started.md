@@ -57,10 +57,7 @@ You can import any external libraries you need, provided they are hosted on **js
 
 Once a song is selected and your code is running, the Anı⃰mr platform will trigger your code based on music events. You can use the `G` object to handle these events and synchronize your animations or game actions with the music.
 
-Your modules will interact with built-in events triggered by the Anı⃰mr framework (like play and pause) as well as custom events you define for your functionality (like scoring in a game). For now, the two main events you can handle are:
-
-- **G.TYPE.PLAY**: Triggered when the song starts playing.
-- **G.TYPE.PAUSE**: Triggered when the song is paused.
+Your modules will interact with built-in events triggered by the Anı⃰mr framework as well as custom events you define for your functionality (like scoring in a game). The full set of events — covering playback, beats, lyrics, notes, and music structure — is available from the moment your module runs. See the [Event-Based System documentation](./event-based-system) for the complete list.
 
 ### Next Steps
 

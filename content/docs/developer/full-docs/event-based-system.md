@@ -23,10 +23,14 @@ Anı⃰mr provides several built-in events that are automatically triggered by t
 - **G.TYPE.CHORD**: Triggered when a chord is played.
 - **G.TYPE.SECTION**: Fired when a part of the song (like verse, chorus, bridge, etc.) begins, if defined.
 - **G.TYPE.LINE**: Triggered at the beginning of each line of lyrics.
+- **G.TYPE.LINE_**: Triggered at the end of each lyrics line.
 - **G.TYPE.SEGMENT**: Fired for parts of the line that were sung by one person.
-- **G.TYPE.WORD**: Triggered for each word sung.
-- **G.TYPE.SYL**: Fired for each syllable.
-- **G.TYPE.NOTE**: Triggered when a musical note is played.
+- **G.TYPE.WORD**: Triggered at the start of each word sung.
+- **G.TYPE.WORD_**: Triggered at the end of each word.
+- **G.TYPE.SYL**: Fired at the start of each syllable.
+- **G.TYPE.SYL_**: Fired at the end of each syllable.
+- **G.TYPE.NOTE**: Triggered when a musical note begins.
+- **G.TYPE.NOTE_**: Triggered when a musical note ends.
 
 ## Custom Events
 
