@@ -43,4 +43,4 @@ Click **Save** when you're done. Your changes are immediately available to all a
 
 ## Next steps
 
-The [Full Music Editor Documentation](./full-docs) covers every tab and tool in detail.
+The [Full Music Editor Documentation](./full-docs/intro) covers every tab and tool in detail.

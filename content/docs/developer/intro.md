@@ -32,4 +32,4 @@ The full workflow for publishable animations. Use the **Anim Designer** to visua
 
 ## Next steps
 
-Head to the [Full Developer Documentation](./full-docs) for concepts, the complete event reference, config parameter docs, and the G object API reference.
+Head to the [Full Developer Documentation](./full-docs/intro) for concepts, the complete event reference, config parameter docs, and the G object API reference.

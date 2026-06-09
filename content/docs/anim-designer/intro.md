@@ -36,4 +36,4 @@ You can reach the designer in two ways:
 
 ## Next steps
 
-The [Full Anim Designer Documentation](./full-docs) covers every tab, option, and workflow in detail.
+The [Full Anim Designer Documentation](./full-docs/intro) covers every tab, option, and workflow in detail.
