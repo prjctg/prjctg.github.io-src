@@ -1,56 +1,81 @@
 ---
 sidebar_position: 4
+title: "Module Collections"
 ---
 
 # Module Collections
 
-In Anı⃰mr, a **module collection** is a grouping of one or more modules or even other module collections. It serves to organize and define the layout of these modules while also managing event routing within the collection.
+A **module collection** is a grouping of one or more modules — or other nested collections — that share a visual layout and a common event bus. Collections are how you build multi-module animations.
 
-## Structure of a Module Collection
+## What a collection provides
 
-A module collection can contain:
+- **Layout** — the collection's HTML and CSS define how child modules are positioned relative to each other
+- **Slot assignment** — each child module is mapped to a named element in the layout HTML
+- **Shared event bus** — modules in the same collection can communicate by emitting and subscribing to custom events via `G.emit` and `G.on`
 
-- Individual modules
-- Other module collections
+## Default layout
 
-By nesting module collections, you can create complex layouts and hierarchical structures. Each module collection has its own ID, allowing for reference and reuse in other module collections.
+If you define a collection without custom HTML, the platform generates a default layout:
 
-## Layout and Default Behavior
+- Each module gets a container `<div>` whose `id` is derived from the module's position in the list
+- All containers are stacked on top of each other using absolute positioning and fill the parent 100%
 
-Module collections can define their own HTML and CSS for layout purposes. If no custom HTML or CSS is defined, the framework applies default settings:
+This default is useful for layered effects where modules share the same space (e.g. a background visualizer behind a foreground lyric display).
 
-- **HTML**: Elements for each module are placed sequentially, with the first module being placed in an element with the ID `#0`, the second module in `#1`, and so on.
-- **CSS**: Modules will take up the full height and width of their parent container and will be layered on top of each other. The first module will be at the bottom, and subsequent modules will be layered on top.
+## Custom layout
 
-Example default layout:
+You can provide your own HTML and CSS for the collection. The HTML defines the structure; each child module is rendered into a named slot element. The CSS controls sizing, position, grid layout, or any other arrangement.
 
-- Module 0 is placed in the element `#0`.
-- Module 1 is placed in the element `#1`, on top of module 0.
+Example: a two-column layout where one module shows lyrics and another shows a visualizer:
 
-Custom layouts can be defined using your own HTML structure and CSS, allowing for more flexible designs if needed.
+```html
+<!-- collection HTML -->
+<div id="lyrics-slot"></div>
+<div id="visualizer-slot"></div>
+```
 
-## Using IDs in Module Collections
+```css
+/* collection CSS */
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+#lyrics-slot, #visualizer-slot {
+  height: 100%;
+}
+```
 
-Each module collection has an ID that can be used to reference it. This is particularly useful when you need to refer to another module collection as part of a larger collection. You can define the "modules" property in a collection by referring to the IDs of other collections or individual modules.
+Each child module is then assigned to one of those slot IDs in the Anim Designer.
 
-## Event Routing in Module Collections
+## Nesting collections
 
-By default, all modules within a collection are connected to an event bus. This means that events emitted by any module can be handled by other modules within the same collection.
+A collection can contain other collections as children. Nested collections follow the same rules: they define their own layout, and their modules share their own inner event bus. Events emitted inside a nested collection do not automatically propagate out to the parent collection's bus.
 
-The event routing can be customized if needed. For example, you might want to:
+## Inter-module communication
 
-- Route events to specific modules
-- Change the event names as they pass through the collection
-- Transform event data before passing it along to other modules
+The only way for modules to communicate is through the collection's event bus:
 
-This flexibility allows for more complex and dynamic event-driven behavior within your module collections.
+```javascript
+// Module A: emit a custom event
+G.emit("scoreChanged", { score: 42 });
 
-## Encapsulation and Interaction
+// Module B (in the same collection): receive it
+G.on("scoreChanged", ({ score }) => {
+  G.getElementById("score-display").textContent = score;
+});
+```
 
-The elements within each module are encapsulated. This means that you should not access elements from another module directly. For example, using `document.getElementById` to reference an element from another module will not work.
+You cannot access another module's DOM elements or JavaScript variables. Encapsulation is enforced — `document.getElementById` will not find elements that belong to a different module. Use `G.getElementById` to access elements within your own module's HTML scope.
 
-Instead, you should use the Anı⃰mr framework’s method `G.getElementById(id)` to access elements within your own module. This ensures encapsulation and maintains a clean separation between modules.
+## Building collections visually
 
-## Conclusion
+The **Anim Designer** (Playground > Anim) is the non-code interface for assembling collections. It lets you:
 
-Module collections in Anı⃰mr provide a flexible way to organize and manage groups of modules, offering control over layout, event routing, and interaction. By using these collections, you can build complex animations or games that are easy to manage and extend.
+- Add and remove modules
+- Assign modules to layout slots
+- Define the collection's HTML and CSS layout
+- Nest sub-collections
+- Preview the result alongside a song
+
+Each module in the designer has its own code editor where you write its JavaScript, CSS, and HTML.

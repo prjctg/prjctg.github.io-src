@@ -1,59 +1,69 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
+title: "Tempo Editor"
 ---
 
 # Tempo Editor
 
-The tempo editor lets you set and refine the BPM (beats per minute) of a song. Getting BPM right is the most important step — all beat-relative events (beats, measures, chords, sections, lyrics) are positioned using beat numbers, and their playback times are derived from the BPM. An accurate BPM means accurate sync.
+The tempo editor is the **Tempo (BPM)** field in the **Info** tab. Getting the BPM right is the most important step in editing a song — all beat and lyric timing is built on top of it.
 
 ---
 
-## Setting BPM
+## What BPM means
 
-You can enter the BPM directly in the BPM input field. If you know the exact BPM from an external source (music database, DAW, etc.), type it in.
+BPM stands for "beats per minute." It describes how fast the song moves. A song at 60 BPM has one beat every second. A song at 120 BPM has two beats every second.
 
-The BPM value takes effect immediately. All beat-relative events shift proportionally to reflect the new tempo.
+Every timing event in the beat grid — beats, measures, chords, sections, and lyrics — is stored as a beat position rather than a raw time. The editor converts beat positions to actual times in the song using the BPM. This means:
 
----
-
-## Tap Detection
-
-If you don't know the exact BPM, use the **tap detector**:
-
-1. Start playback.
-2. Click (or tap) the **Tap** button in time with the beat you hear.
-3. After a few taps, the detected BPM is shown and applied.
-
-Tap more times for a more accurate average. The detector computes the BPM from the intervals between your taps.
+- If you change the BPM, all beat-relative events automatically shift to stay on the same beats.
+- An accurate BPM keeps everything aligned with the music even after small adjustments.
 
 ---
 
-## BPM Regions (Variable Tempo)
+## Typing the BPM directly
 
-Some songs change tempo mid-way through, or have a short intro that doesn't fit the main BPM. The tempo editor supports **BPM regions**: each region has its own BPM value and starts at a specific time offset.
-
-- **Add a region** by clicking the **+** button next to the BPM input while the playhead is at the desired start position.
-- **Edit a region** by clicking on it and entering a new BPM.
-- **Delete a region** by selecting it and pressing Delete.
-
-The first region always starts at time zero. Regions are listed in chronological order.
+If you already know the BPM — from a music database, a DAW, or the original recording — just type it into the BPM field. The change takes effect immediately and all existing events shift to match.
 
 ---
 
-## How BPM Affects Events
+## Tap detector
 
-Every beat-relative event stores a **beat number** (e.g., beat 2.5). At playback time, the scheduler converts that beat number to a time in seconds using the BPM and region boundaries. The formula is:
+If you don't know the BPM, use the built-in tap detector:
 
-```
-time = startOfRegion + (beatNumber - regionStartBeat) × (60 / regionBPM)
-```
+1. Start playback so you can hear the song.
+2. Click the **Tap** button in the BPM field in time with the beat — as if you were tapping your foot.
+3. After several taps the editor shows the calculated BPM and applies it.
 
-When you change the BPM, all beat-relative events automatically recalculate to new positions — no manual adjustment needed.
+Tap more times for a more accurate result. The first tap or two are less reliable; the accuracy improves as you keep tapping. You can tap along for as long as you like, then stop.
 
 ---
 
-## Absolute-Time Events and BPM Changes
+## BPM regions (variable tempo)
 
-If the song contains **absolute-time events** (see [Beat Grid — Beat-Relative vs. Absolute-Time Events](./beat-grid#beat-relative-vs-absolute-time-events)), those events are deliberately not affected by BPM changes. Their playback position stays fixed in seconds. Their displayed beat position is recalculated to show where they fall within the new BPM grid, but the underlying time anchor does not change.
+Some songs are not a single steady tempo throughout. They may have a slow intro, a mid-song tempo change, or a live recording with slight drift.
 
-This is intentional: absolute-time events are typically LRC-imported lyrics whose timestamps are independent of any BPM. Once you have finalized the BPM, use **Bake to Beats** in the beat grid toolbar to convert them to beat-relative events.
+The tempo editor supports **BPM regions**: sections of the song that each have their own BPM. When the song crosses a region boundary, the editor switches to that region's BPM.
+
+### Adding a region
+
+1. Seek the playhead to the point in the song where the new tempo begins.
+2. Click the **+** button next to the BPM field.
+3. Enter the BPM value for the new region.
+
+The first region always starts at the very beginning of the song.
+
+### Editing a region
+
+Click the region entry and type a new BPM value.
+
+### Deleting a region
+
+Select the region and press Delete. The first region (starting at time zero) cannot be deleted.
+
+---
+
+## Absolute-time events and BPM changes
+
+If the song contains lyrics imported from an LRC file, those events are anchored to fixed times and will not shift when you change the BPM. This is intentional — their original timestamps are independent of any BPM.
+
+Once you have settled on the right BPM, use **Bake to Beats** in the Timing tab to convert those events so they follow the beat grid. See [Beat Grid](./beat-grid) for details.

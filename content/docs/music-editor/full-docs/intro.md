@@ -1,56 +1,60 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
+title: "Music Editor Overview"
 ---
 
-# Music Editor Full Documentation
+# Music Editor Overview
 
-The music editor is where song data is created and refined. Accurate data is what lets animations sync precisely to the music — every beat marker, lyric line, and chord you add improves the experience for every animation that uses that song.
-
----
-
-## What Music Editors Do
-
-A music editor's job is to annotate a song with structured data:
-
-- **Tempo (BPM)** — the foundation of all beat-relative timing
-- **Time signatures** — how beats group into measures
-- **Keys and chords** — harmonic data that animations can react to
-- **Sections** — verse, chorus, bridge, outro, etc.
-- **Lyrics** — lines, words, syllables with precise timing
-- **Notes** — individual note events for note-level animations
-
-All of this data is what the event system delivers to animations at playback time.
+The music editor is where song data is created and refined. Every beat marker, lyric line, chord, and section you add improves the experience for every animation that uses that song.
 
 ---
 
-## Editor Workflow
+## Editor tabs
 
-1. **Select a song** from the song browser (`/s/e`) or open a song's detail page.
-2. **Set the tempo** — enter BPM manually or use the tap detector to derive it from the audio.
-3. **Place timing events** — use the beat grid to add and position beats, measures, sections, keys, and chords.
-4. **Add lyrics** — type or import lyrics, then align them to the audio timeline.
-5. **Split syllables** — break words into syllables for fine-grained sync.
-6. **Save** — changes are persisted and immediately available to all animations.
+When you open a song for editing, five tabs are available along the top:
 
----
-
-## Editor Tabs
-
-When you open a song for editing, several tabs are available:
-
-| Tab | Purpose |
+| Tab | What you do here |
 |---|---|
-| **Info** | Song title, artists, video URL, duration |
-| **Lyrics** | Add and edit lyric lines per language, manage lyric sources |
-| **Align** | Time-align lyrics to the audio |
-| **Timing** | Beat grid — place and adjust all timing events |
+| **Info** | Set the song title, artists, URL, BPM, key, and duration |
+| **Lyrics** | Add and manage lyric text, import LRC files, split syllables |
+| **Timing** | Align lyric lines to the audio and view the beat grid |
+| **Details** | Add sections, keys, chords, and time signature changes |
+| **Preview** | Watch a preview of the song with your data applied |
 
 ---
 
-## In This Section
+## What gets saved
 
-The following pages cover each part of the editor in detail:
+Changes you make in the editor are saved locally on your device as you work. Click **Save** in the toolbar to publish your changes so they become available to all animations.
 
-- [Beat Grid](./beat-grid) — how to place and edit timing events
+If you are not signed in, the **Save** button saves a local draft instead. You can sign in at any time to publish.
+
+You can also click **Save Draft** to save an offline snapshot without publishing — useful for pausing and resuming work later.
+
+---
+
+## The contribution workflow
+
+1. Open a song (or create a new one with **New Song**).
+2. Fill in the **Info** tab: title, artists, URL, and BPM.
+3. Switch to **Lyrics** and type or import the song's lyrics.
+4. Open **Timing** and record timing by tapping along with the music.
+5. Open **Details** to mark sections, keys, chords, and time signatures.
+6. Click **Save**.
+
+---
+
+## Keyboard shortcuts
+
+The beat grid in the **Timing** tab supports keyboard shortcuts. Click the **?** button in the toolbar to see the full list.
+
+---
+
+## In this section
+
+- [Song Info](./song-info) — filling in the Info tab
+- [Lyrics](./lyrics) — adding and managing lyric text
+- [Timing](./timing) — aligning lyrics to the audio
+- [Beat Grid](./beat-grid) — the visual timing editor
 - [Tempo Editor](./tempo-editor) — setting BPM and handling variable tempo
-- [Lyrics Editor](./lyrics-editor) — adding, importing, aligning, and splitting lyrics
+- [Musical Data](./musical-data) — sections, keys, chords, and time signatures

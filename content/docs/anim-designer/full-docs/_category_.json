@@ -1,0 +1,9 @@
+{
+  "label": "Anim Designer Documentation",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/anim-designer/full-docs",
+    "description": "Full Anim Designer Documentation"
+  }
+}

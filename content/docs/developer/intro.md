@@ -1,24 +1,35 @@
 ---
 sidebar_position: 1
+title: "Developer Guide"
 ---
 
 # Developer Guide
 
-Welcome, Developers! This guide will help you dive into the technical side of Anı⃰mr by contributing code for animations, games, and more.
+This guide is for JavaScript developers who want to build music-reactive content on the Animr platform — whether that means karaoke displays, instrument guides, rhythm games, or abstract visualizers.
 
-### What you can do as a Developer:
+## What you can build
 
-- **Create custom animations and games**: Sync your creations with music using the event-based system.
-- **Interact with song data**: Programmatically control music (play, pause, seek) and retrieve song metadata within your code.
-- **Use the API**: Access a rich set of methods, constants, and event types to build dynamic experiences.
-- **Feature highlights**:
-  - Autocompletion in the code editor
-  - Example event-based code snippets to get started
+Animr gives your code a live feed of music events: beats, measures, lyrics, chords, notes, and more. You react to those events with JavaScript, CSS, and HTML to produce whatever you want on screen.
 
-### How to Get Started:
+Typical uses include:
 
-1. Familiarize yourself with the API and available music control methods.
-2. Write your first animation or game using the event-based system.
-3. Test and submit your code through the platform.
+- **Karaoke and lyric displays** — highlight syllables, words, or lines in sync with vocals
+- **Instrument guides** — show chord shapes or tablature tied to the chord events in a song
+- **Rhythm games** — spawn targets on beats, score hits using custom events between modules
+- **Visualizers and generative art** — react to beat and tick events to drive canvas animations
 
-Refer to the [Full Developer Documentation](../developer/full-docs) for detailed API references, tutorials, and sample code.
+## Two entry points
+
+### Code Playground
+
+The fastest way to experiment. Navigate to **Playground > Code** in the app. Write JavaScript in the ES Module tab, add CSS and HTML if needed, pick a song, and click Preview. No account publishing required — your code runs immediately in the browser alongside the selected song.
+
+The Playground is gated to developer mode. Enable developer mode in your account preferences first.
+
+### Anim Designer + IDE
+
+The full workflow for publishable animations. Use the **Anim Designer** to visually arrange a Module Collection — define the layout, assign modules to slots, nest sub-collections. Each module's code lives in the code editor (IDE) attached to that module. When you publish, the animation becomes available to all users of the platform.
+
+## Next steps
+
+Head to the [Full Developer Documentation](./full-docs) for concepts, the complete event reference, config parameter docs, and the G object API reference.

@@ -1,27 +1,27 @@
 ---
 sidebar_position: 1
+title: "Explorer Guide"
 ---
 
 # Explorer Guide
 
-Welcome, Explorers! This guide is designed to help you get the most out of Anı⃰mr by watching animations and playing games synced to music.
+Welcome! As an Explorer, you can watch animations synced to music, discover new content, and personalise the experience to your liking. No account required to start watching.
 
-### What you can do as an Explorer:
+## Get started in three steps
 
-- **Watch animations**: Enjoy beautifully synchronized animations with your favorite songs.
-- **Play games**: Engage with interactive games that follow the rhythm of the music.
-- **Explore features**:
-  - Play/pause music
-  - Switch animations or games while music continues playing
-  - Change playback rate
-  - Toggle between light/dark mode
-  - Switch to full-screen mode for an immersive experience
-  - Set the video as a background to the animations, or hide it to focus on the animation itself
+1. Go to the **Discover** page (the home page). You will see rows of songs and animations to pick from.
+2. Click any song or animation card to open the player.
+3. Press **Play** and enjoy.
 
-### How to Get Started:
+That is all there is to it. The animation plays in sync with the music automatically.
 
-1. Browse the available animations and games.
-2. Select a track and hit play.
-3. Interact with the available features to customize your experience.
+---
 
-Check the [Full Explorer Documentation](../explorer/full-docs) for more details on the features available to you.
+## What else can you do?
+
+- **Browse** the full song and animation libraries from the **Songs** and **Anims** sections in the navigation.
+- **Search** for a specific song by title or artist name.
+- **Switch animations** mid-song without interrupting playback.
+- **Adjust settings** like playback speed, volume, video background, and more.
+
+For a full walkthrough of every feature, see the [Full Explorer Documentation](./full-docs/intro).

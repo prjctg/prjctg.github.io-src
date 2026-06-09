@@ -1,89 +1,127 @@
 ---
 sidebar_position: 2
+title: "Getting Started"
 ---
 
-# Getting Started with Anı⃰mr Development
+# Getting Started
 
-Welcome to the development section of Anı⃰mr! In this guide, you'll learn how to create animations and games that sync with music using the Anı⃰mr platform. Development is entirely browser-based, so you won’t need to set up a local environment. Here's how you can get started:
+This guide walks you through writing and running your first animation in the Code Playground.
 
-## Key Concepts
+## Prerequisites
 
-Anı⃰mr allows you to create both **animations** and **games**. The difference lies mainly in the interactivity level:
+The Code Playground is only visible when developer mode is enabled. Turn it on in your account preferences before continuing.
 
-- **Animations** focus on visual effects triggered by music events.
-- **Games** add interactive elements like mouse clicks or touch events and may include scoring logic or more complex event handling.
+## Opening the Code Playground
 
-## Understanding Modules
+Navigate to **Playground** in the top bar. The Playground has three mode tabs: **Song**, **Anim**, and **Code**. Select **Code**.
 
-In Anı⃰mr, your development unit is a **module**, which combines JavaScript code, CSS, and HTML. Modules can be combined into a **module collection**, allowing for more complex layouts and interactivity. Each module encapsulates its CSS and HTML, ensuring that styles and markup do not interfere with other modules.
+## The editor tabs
 
-## Running Code in the Browser
+The Code editor has four tabs:
 
-You will develop your code online, directly in the Anı⃰mr application. Each module runs directly in the browser through a special environment called the **Code Playground**, where you can test your animations and games alongside selected songs.
-This includes three tabs where you can input:
+| Tab | Purpose |
+|---|---|
+| **ES Module** | Your JavaScript — must export a `main(G)` function as the default export |
+| **CSS** | Styles scoped to your module |
+| **HTML** | Markup that your JavaScript can query via `G.getElementById` |
+| **Preview** | Runs your code alongside the selected song |
 
-- **JavaScript ES Module**: The core logic for your animation or game.
-- **CSS**: For styling your animation.
-- **HTML**: The structure or layout of elements.
+## Selecting a song and running
 
-### Key Steps:
+1. Switch to the **Song** tab in the Playground to pick a song. Any song on the platform works.
+2. Return to the **Code** tab and write your module.
+3. Click the **Preview** tab (or navigate to it). Your code runs immediately.
 
-1. **Write Your Module**: You will implement your module as a JavaScript ES Module, exporting a main function. This function receives an object conventionally named `G` as the first argument, which contains methods and constants to interact with the platform. You’ll use this object to control animation initialization and event handling.
+If no song has been selected, the player will be empty and music events will not fire until you select one.
 
-2. **Run Your Code**: After inputting your code in the Code Playground, hit the "Run" button. Your code will run alongside the currently selected song, and music events will trigger the appropriate handlers in your code. If no song is selected, you'll need to pick one before running the code.
+## Your first module
 
-3. **Debugging**: Any errors or exceptions will be shown directly on the running page as well as in your browser’s Developer Tools console.
+Here is a minimal working example. It listens for the `G.TYPE.BEAT` event and flashes the background color on every beat:
 
-#### Example:
+**ES Module tab:**
 
 ```javascript
 export default function main(G) {
-  // Your animation or game logic here
-  G.on(G.TYPE.PLAY, () => {
-    console.log("Music started playing!");
+  G.on(G.TYPE.INIT, () => {
+    const box = G.getElementById("box");
+    box.style.transition = "background 100ms";
   });
 
-  G.on(G.TYPE.PAUSE, () => {
-    console.log("Music is paused!");
+  G.on(G.TYPE.BEAT, () => {
+    const box = G.getElementById("box");
+    box.style.background = "#ff4444";
+    setTimeout(() => {
+      box.style.background = "#111";
+    }, 80);
   });
 }
 ```
 
-## Allowable Imports and External Libraries
+**HTML tab:**
 
-You can import any external libraries you need, provided they are hosted on **jsDelivr** or **esm.sh**. This ensures security and browser compatibility. There are no restrictions on which libraries to use—you're free to explore and choose the best tools for your project.
+```html
+<div id="box"></div>
+```
 
-## Running Your Code with Music
+**CSS tab:**
 
-Once a song is selected and your code is running, the Anı⃰mr platform will trigger your code based on music events. You can use the `G` object to handle these events and synchronize your animations or game actions with the music.
+```css
+#box {
+  width: 100%;
+  height: 100%;
+  background: #111;
+}
+```
 
-Your modules will interact with built-in events triggered by the Anı⃰mr framework as well as custom events you define for your functionality (like scoring in a game). The full set of events — covering playback, beats, lyrics, notes, and music structure — is available from the moment your module runs. See the [Event-Based System documentation](./event-based-system) for the complete list.
+Click Preview and start playback. The box flashes on every beat.
 
-### Next Steps
+## Subscribing to more events
 
-Now that you have a basic understanding, let’s dive into the details of the event-based system!
+You can register as many handlers as you like. They are all called each time the event fires:
 
-## Advanced Details
+```javascript
+export default function main(G) {
+  G.on(G.TYPE.PLAY, () => console.log("playing"));
+  G.on(G.TYPE.PAUSE, () => console.log("paused"));
 
-For those interested in diving deeper into the concepts of Anı⃰mr development, here are some additional details:
+  G.on(G.TYPE.SYL, (syl) => {
+    // syl contains data about the current syllable
+    console.log(syl);
+  });
+}
+```
 
-- **Module Structure**: Each module encapsulates its CSS and HTML, ensuring that styles and markup do not interfere with other modules.
-- **Event Types**: You can handle built-in events triggered by the Anı⃰mr framework and create custom events for specific functionality. For example, you might create events like "score" or "gameOver."
+See [Event-Based System](./event-based-system) for the full list of event types and their payloads.
 
-- **Module Collections**: A **module collection** consists of one or more modules combined together. You can also nest collections for more complex interactions and layouts.
+## How errors are displayed
 
-- **Encapsulation and Interaction**: The JavaScript code can only access its own module's elements, promoting modular design and ensuring that interactions remain contained within their respective modules.
+If your module throws an error during initialization or inside a handler, the error message and stack trace appear directly in the preview area. The same information is logged to the browser's developer console.
 
-If you wish to learn more about these advanced topics, please refer to the [Event-Based System documentation](#) and the [Module Collections guide](#).
+Open DevTools (`F12` or `Ctrl+Shift+I`) to see all console output from your module, including anything you log with `console.log`.
 
-## Contributing to the Resource Center
+## Importing external libraries
 
-The Resource Center documentation is open-source! Each page contains an "Edit this page" link that takes you to the page's GitHub repository.
+You can import any library hosted on **jsDelivr** or **esm.sh**:
 
-### How to Contribute:
+```javascript
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-1. Fork the repository and make changes to the relevant Markdown files.
-2. Create a new pull request with your edits.
-3. Your changes will be reviewed and merged into the official documentation.
+export default function main(G) {
+  G.on(G.TYPE.TICK, (time) => {
+    // use d3 here
+  });
+}
+```
 
-If you’ve never contributed to open source before, don’t worry—[GitHub's documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) provides helpful guides on how to create pull requests.
+Imports from other origins are blocked by the platform's Content Security Policy.
+
+## Saving your work
+
+Use the **Save Draft** button in the Code Playground toolbar to save your work as a named draft. From there you can continue editing in the full code editor or prepare it for publishing as an animation.
+
+## Next steps
+
+- Read [Event-Based System](./event-based-system) to see all available events and their payloads
+- Read [Animation Configuration](./animation-config) to expose user-adjustable parameters in your animation
+- Read [Module Collections](./module-collection) to combine multiple modules into one layout
+- Read [G Object Reference](./g-object-reference) for the complete API surface
