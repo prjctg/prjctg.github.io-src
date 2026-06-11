@@ -9,13 +9,15 @@ Anı⃰mr is a platform where music and animation come together. You can sit bac
 
 ---
 
-## Three ways to use Anı⃰mr
+## Four ways to use Anı⃰mr
 
 **Explorer** — Browse songs and animations, hit play, and enjoy the show. Discover new content on the home page, search for songs you love, and adjust the experience to suit your taste.
 
 **Music Editor** — Help grow the library by contributing song data. This includes adding lyrics, timing information, and other details that power the animations.
 
-**Anim Designer / Developer** — Build custom animations that respond to the music. Animations are coded against a rich set of music events — beats, lyrics, chords, and more — so the visuals move with the song.
+**Anim Designer** — Compose animations without writing code. Pick visual modules created by developers, choose how they are arranged on screen, and expose settings that let viewers personalise the experience.
+
+**Developer** — Build the code modules that power animations. Modules receive a live stream of music events — beats, lyrics, chords, sections, and more — and use JavaScript, CSS, and HTML to produce whatever visuals you imagine.
 
 ---
 

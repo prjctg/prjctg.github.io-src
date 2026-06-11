@@ -26,9 +26,11 @@ The fastest way to experiment. Navigate to **Playground > Code** in the app. Wri
 
 The Playground is gated to developer mode. Enable developer mode in your account preferences first.
 
-### Anim Designer + IDE
+### Code Module Editor
 
-The full workflow for publishable animations. Use the **Anim Designer** to visually arrange a Module Collection — define the layout, assign modules to slots, nest sub-collections. Each module's code lives in the code editor (IDE) attached to that module. When you publish, the animation becomes available to all users of the platform.
+The full workflow for publishing a module. Open an existing module or create a new one, write your JavaScript in the IDE, add CSS and HTML as needed, preview against a song, then publish with a version number. Once published, other users can reference your module by name in their animations.
+
+If you want to compose an animation from existing modules without writing code, see the [Anim Designer Guide](/docs/anim-designer/intro) instead.
 
 ## Next steps
 

@@ -61,3 +61,5 @@ When you are happy with your animation:
 ## How the designer relates to developer tools
 
 Modules are the building blocks of every animation. A developer writes the code that powers each module — the logic that listens to the music and draws visuals on screen. The Anim Designer's job is to assemble those already-written modules into an animation, configure how they appear, and expose settings to viewers. You do not need to write or understand any code to use the designer.
+
+If you do want to inspect or hand-edit the underlying animation data, the designer has an escape hatch: each animation has **JSON**, **CSS**, and **HTML** tabs alongside the **Design** tab. Switching to those tabs shows the raw module collection format, and any changes you make there are reflected back in the designer when you return. This round-trip is lossless for all features the designer supports.
